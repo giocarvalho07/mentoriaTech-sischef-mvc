@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width"/>
+	<link th:href="@{/css/style.css}" rel="stylesheet" />
+	<title> sischef </title>
+</head>
+	<body>
+
+    <header>
+        <nav>
+            <ul>
+                <img id="logo" class="itens-menu" src="imagens/logoSischef.png" alt="logotipo do Sischef">
+                <a class="itens-menu" href="/"> Home </a>
+                <a class="itens-menu" href="#cardapio"> Cardápio </a>
+                <a class="itens-menu" href="#contato"> Contato </a>
+            </ul>
+
+            <div class="iten-do-menu">
+                <div class="ver-produtos">
+                    <a href="/produto"> Ver produtos </a>
+                </div>
+
+                <a class="cadastre-produtos" href="/cadastro-produto">
+                    <span>
+                        Cadastre o produto
+                    </span>
+                </a>
+            </div>
+        </nav>
+    </header>
+             
+    <div>
+    	<img id="Background" class="background-banner" src="imagens/banner.jpg" alt="logo tipó do Sischef">
+    </div>
+
+    <main id="cardapio">
+        <div class="main-titulo">
+            <h3>
+                Bem vindo ao Sischef
+            </h3>
+        </div>
+        <div class="main-conteudo">
+            <div class="main-conteudo-texto">
+                <h4>Cardápio digital.
+                </h4>
+                <p>
+                    Essa é a nova moda,
+                </p>
+                <p>
+                    essa é a nossa arte.
+                </p>
+
+            </div>
+            <div class="main-conteudo-foto">
+                <img class="borda" src="imagens/backgroung2Sischef.jpg" alt="imagem de diversas comidas ">
+            </div>
+        </div>
+    </main>
+
+
+    <div class="section-entregador" >
+        <div class="section-conteudo">
+            <div class="section-conteudo-foto">
+                <img src="imagens/backgroung3Sischef-removebg-preview.png" alt="imagem de diversas comidas ">
+            </div>
+            <div class="section-conteudo-texto">
+                <h4> Entrega humanizada.
+                </h4>
+                <p>
+                    Nossos entregadores só
+                </p>
+                <p>
+                    estão esperando o seu pedido.
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section-contato" id="contato">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1634991297396!2d-46.656938685022325!3d-23.562570684682346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8e65114ab%3A0x77a9bdfbd2f90d5b!2sAv.%20Paulista%2C%201374%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1sen!2sbr!4v1624840940071!5m2!1sen!2sbr"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+        <a href="https://api.whatsapp.com/send?phone=5511961985346&text=Seja%20bem%20vindo%20ao%20Sischef!" class="button"  target="_blank"> Contato</a>
+    </div>
+
+
+
+    <footer>
+        <div id="endereco-footer" class="itens-footer">
+            <img class="logo-footer" src="imagens/logoFooterFacebook.png" alt="logo do facebook">
+
+            <img class="logo-footer" src="imagens/logoFooterInstagram.png" alt="logo do instagram">
+
+            <img class="logo-footer" src="imagens/logoFooterWpp.png" alt="logo do whatsapp">
+        </div>
+
+        <div id="contato-footer" class="itens-footer-direitos">
+
+            <p>
+                @Sischef todos os direitos reservados
+            </p>
+        </div>
+
+        <div id="redes-sociais-footer" class="itens-footer">
+            <img class="logo-footer" src="imagens/logoSischef.png" alt="logo do Sischef">
+
+        </div>
+    </footer>
+	
+	</body>
+</html>

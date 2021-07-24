@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width"/>
+	<link th:href="@{/../css/cadastro.css}" rel="stylesheet" />
+	<title> sischef </title>
+</head>
+	<body>
+
+    <header>
+        <nav>
+            <ul>
+                <img id="logo" class="itens-menu" src="../imagens/logoSischef.png" alt="logotipo do Sischef">
+                <a class="itens-menu" href="/"> Home </a>
+                <a class="itens-menu" href="#cardapio"> Cardápio </a>
+                <a class="itens-menu" href="#contato"> Contato </a>
+            </ul>
+
+            <div class="iten-do-menu">
+                <div class="ver-produtos">
+                    <a href="/produto"> Ver produtos </a>
+                </div>
+
+                <a class="cadastre-produtos" href="/cadastro-produto">
+                    <span>
+                        Cadastre o produto
+                    </span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+
+    <section>
+        <form th:action="@{/cadastro-produto}" th:object="${produto}" method="post">
+            <label for="fname">
+                Cadastre o nome do produto
+            </label>
+            <input type="text" name="nome">
+
+            <label for="categoria">
+                Cadastre a categoria do produto
+            </label>
+            <select id="categoria" name="categoria" required >
+                <option selected value=""> Escolha a categoria </option>
+			    <option th:each="categoria: ${T(com.sischefmanager.model.Categoria).values()}"
+			    th:value="${categoria}" th:text="${categoria}">
+			   	</option>
+              </select>
+
+
+			  				
+            <label for="fname">
+                Cadastre o preço do produto
+            </label>
+            <input type="text" id="fname" name="preco">
+
+            <a href="/" class="button" > voltar</a>
+
+            <input type="submit" value="cadastre">
+
+
+
+        </form>
+    </section>
+
+
+    <footer>
+        <div id="endereco-footer" class="itens-footer">
+            <img class="logo-footer" src="../imagens/logoFooterFacebook.png" alt="logo do facebook">
+
+            <img class="logo-footer" src="../imagens/logoFooterInstagram.png" alt="logo do instagram">
+
+            <img class="logo-footer" src="../imagens/logoFooterWpp.png" alt="logo do whatsapp">
+        </div>
+
+        <div id="contato-footer" class="itens-footer-direitos">
+
+            <p>
+                @Sischef todos os direitos reservados
+            </p>
+        </div>
+
+        <div id="redes-sociais-footer" class="itens-footer">
+            <img class="logo-footer" src="../imagens/logoSischef.png" alt="logo do Sischef">
+
+        </div>
+    </footer>
+	
+	</body>
+</html>
